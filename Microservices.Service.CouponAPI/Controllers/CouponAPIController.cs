@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Microservices.Service.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     [ApiController]
     public class CouponAPIController : ControllerBase
     {
@@ -110,6 +110,7 @@ namespace Microservices.Service.CouponAPI.Controllers
         }
 
         [HttpDelete]
+        [Route("{id:int}")]
         public ResponseDto Delete(int id)
         {
             try
