@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices.Service.Coupo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservice.Web", "Microservice.Web\Microservice.Web.csproj", "{1A7B29A6-08A4-4EAC-B793-C0FD46260C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microseervices.Services.AuthAPI", "Microseervices.Services.AuthAPI\Microseervices.Services.AuthAPI.csproj", "{A0BC236A-5D71-4C3D-BEEB-AE625D16FC4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microseervices.Services.AuthAPI", "Microseervices.Services.AuthAPI\Microseervices.Services.AuthAPI.csproj", "{A0BC236A-5D71-4C3D-BEEB-AE625D16FC4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

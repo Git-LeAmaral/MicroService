@@ -1,4 +1,4 @@
-﻿namespace Microseervices.Services.AuthAPI.Models.Dto
+﻿namespace Microseervice.Web.Models
 {
     public class RegistrationRequestDto
     {
