@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microservices.Services.ProductAPI;
 using Microservices.Services.ProductAPI.Data;
+using Microservices.Services.ProductAPI.Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -47,7 +48,7 @@ builder.Services.AddSwaggerGen(option =>
         }
     });
 });
-builder.Services.AddAuthentication();
+builder.AddAppAuthentication();
 
 builder.Services.AddAuthorization();
 
