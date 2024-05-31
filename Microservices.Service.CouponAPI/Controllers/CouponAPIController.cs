@@ -57,7 +57,7 @@ namespace Microservices.Service.CouponAPI.Controllers
         }
 
         [HttpGet]
-        [Route("GetByCode{code}")]
+        [Route("GetByCode/{code}")]
         public ResponseDto GetByCode(string code)
         {
             try
