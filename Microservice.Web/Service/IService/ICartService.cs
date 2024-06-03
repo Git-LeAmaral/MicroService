@@ -8,5 +8,6 @@ namespace Microservice.Web.Service.IService
         Task<ResponseDto?> UpsertCartAsync(CartDto cartDto);
         Task<ResponseDto?> RemoveCartAsync(int cartDetailId);
         Task<ResponseDto?> ApplyCouponAsync(CartDto cartDto);
+        Task<ResponseDto?> EmailCart(CartDto cartDto);
     }
 }

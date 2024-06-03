@@ -1,4 +1,4 @@
-﻿namespace Microservice.Web.Models
+﻿namespace Microservice.Services.EmailAPI.Model.Dto
 {
     public class CartHeaderDto
     {

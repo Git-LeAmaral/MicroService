@@ -4,7 +4,7 @@ using Microservice.Web.Utility;
 
 namespace Microservice.Web.Service
 {
-        public class CartService : ICartService
+    public class CartService : ICartService
     {
             private readonly IBaseService _baseService;
 
@@ -20,6 +20,16 @@ namespace Microservice.Web.Service
                 ApiType = SD.ApiType.POST,
                 Data = cartDto,
                 Url = SD.ShoppingCartAPIBase + "/api/cart/ApplyCoupon"
+            });
+        }
+
+        public async Task<ResponseDto?> EmailCart(CartDto cartDto)
+        {
+            return await _baseService.SendAsync(new RequestDto()
+            {
+                ApiType = SD.ApiType.POST,
+                Data = cartDto,
+                Url = SD.ShoppingCartAPIBase + "/api/cart/EmailCartRequest"
             });
         }
 
