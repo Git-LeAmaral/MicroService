@@ -9,6 +9,7 @@
   <ItemGroup>
 	  <PackageReference Include="AutoMapper" Version="13.0.1" />
 	  <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" Version="7.0.0" />
+	  <PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.5" />
 	  <PackageReference Include="IdentityModel" Version="7.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
@@ -26,6 +27,10 @@
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	  <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
 	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microservices.MessageBus\Microservices.MessageBus.csproj" />
   </ItemGroup>
 
 </Project>

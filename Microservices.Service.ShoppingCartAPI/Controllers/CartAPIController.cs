@@ -98,7 +98,7 @@ namespace Microservices.Service.ShoppingCartAPI.Controllers
         {
             try
             {
-                await _messageBus.PublidhMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCart"));
+                await _messageBus.PublidhMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
                 _response.Result = true;
             }
             catch (Exception ex)

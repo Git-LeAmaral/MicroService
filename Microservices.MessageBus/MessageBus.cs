@@ -10,7 +10,8 @@ namespace Microservices.MessageBus
 {
     public class MessageBus : IMessageBus
     {
-        //private string connectionString = ;
+        //commented connectionString because it doesn't go up on github
+        // private string connectionString = "";
 
         public async Task PublidhMessage(object message, string topic_queue_Name)
         {

@@ -1,6 +1,7 @@
 using Microseervices.Services.AuthAPI.Models;
 using Microseervices.Services.AuthAPI.Service;
 using Microseervices.Services.AuthAPI.Service.IService;
+using Microservices.MessageBus;
 using Microservices.Service.AuthAPI.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -17,6 +18,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IMessageBus, MessageBus>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
