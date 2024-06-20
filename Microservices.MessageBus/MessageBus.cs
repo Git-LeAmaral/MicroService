@@ -11,7 +11,7 @@ namespace Microservices.MessageBus
     public class MessageBus : IMessageBus
     {
         //commented connectionString because it doesn't go up on github
-        //private string connectionString = "Endpoint=sb://microserviceweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ZipOXkji1WzOKFGvunjErvm0Gw5HrOMSH+ASbLq/ZS0=";
+        private string connectionString = "Endpoint=sb://microserviceweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=ZipOXkji1WzOKFGvunjErvm0Gw5HrOMSH+ASbLq/ZS0=";
 
         public async Task PublidhMessage(object message, string topic_queue_Name)
         {
