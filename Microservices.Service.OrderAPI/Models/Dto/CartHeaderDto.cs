@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Microservice.Service.OrderAPI.Models.Dto
+﻿namespace Microservice.Service.OrderAPI.Models.Dto
 {
     public class CartHeaderDto
     {
