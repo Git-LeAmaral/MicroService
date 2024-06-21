@@ -31,7 +31,7 @@ namespace Microservice.Web.Controllers
             return View(await LoadCartDtoBaseOnLoggedInUser());
         }
 
-        [Authorize]
+        [HttpPost]
         [ActionName("Checkout")]
         public async Task<IActionResult> Checkout(CartDto cartDto)
         {
