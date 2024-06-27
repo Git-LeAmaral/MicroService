@@ -4,7 +4,7 @@ using Microservices.Service.OrderAPI.Data;
 using Microservices.Service.OrderAPI.Models;
 using Microservices.Service.OrderAPI.Models.Dto;
 using Microservices.Service.OrderAPI.Utility;
-using Microservices.Service.ShoppingCartAPI.Service.IService;
+using Microservices.Service.OrderAPI.Service.IService;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

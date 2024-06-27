@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Microservices.MessageBus\Microservices.MessageBus.csproj" />
-    <ProjectReference Include="..\Microservices.Service.ShoppingCartAPI\Microservices.Service.ShoppingCartAPI.csproj" />
   </ItemGroup>
 
 </Project>
