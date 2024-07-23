@@ -1,7 +1,6 @@
 ﻿using Microservice.Web.Models;
 using Microservice.Web.Service.IService;
 using Microservice.Web.Utility;
-using Microservices.Web.Models;
 
 namespace Microservice.Web.Service
 {
