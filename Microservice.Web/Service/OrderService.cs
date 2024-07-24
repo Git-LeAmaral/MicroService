@@ -38,7 +38,7 @@ namespace Microservice.Web.Service
             return await _baseService.SendAsync(new RequestDto()
             {
                 ApiType = SD.ApiType.GET,
-                Url = SD.OrderAPIBase + "/api/order/GetOrders/" + userId
+                Url = SD.OrderAPIBase + "/api/order/GetOrders?userId=" + userId
             });
         }
 
