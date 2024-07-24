@@ -26,7 +26,7 @@ namespace Microservice.Web.Service
 
                 HttpClient client = _httpClientFactory.CreateClient("MircoservicesAPI");
                 HttpRequestMessage message = new();
-                message.Headers.Add("Accept", "application/josn");
+                message.Headers.Add("Accept", "application/json");
                 //token
                 if (withBearer)
                 {
@@ -39,7 +39,7 @@ namespace Microservice.Web.Service
                 {
                     message.Content = new StringContent(JsonConvert.SerializeObject(requestDto.Data), Encoding.UTF8, "application/json");
                 }
-                    HttpResponseMessage? apiResposne = null;
+                    HttpResponseMessage? apiResponse = null;
 
                     switch (requestDto.ApiType)
                     {
@@ -57,9 +57,9 @@ namespace Microservice.Web.Service
                             break;
                     }
 
-                    apiResposne = await client.SendAsync(message);
+                    apiResponse = await client.SendAsync(message);
 
-                    switch (apiResposne.StatusCode)
+                    switch (apiResponse.StatusCode)
                     {
                         case HttpStatusCode.NotFound:
                             return new() { IsSuccess = false, Message = "Not Found" };
@@ -70,7 +70,7 @@ namespace Microservice.Web.Service
                         case HttpStatusCode.InternalServerError:
                             return new() { IsSuccess = false, Message = "Internal Server Error" };
                         default:
-                            var apiContent = await apiResposne.Content.ReadAsStringAsync();
+                            var apiContent = await apiResponse.Content.ReadAsStringAsync();
                             var apiResponseDto = JsonConvert.DeserializeObject<ResponseDto>(apiContent);
                             return apiResponseDto;
                     }

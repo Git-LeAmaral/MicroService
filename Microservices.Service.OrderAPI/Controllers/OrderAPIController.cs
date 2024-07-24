@@ -36,7 +36,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             _configuration = configuration;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetOrders")]
         public ResponseDto? Get(string? userId = "")
         {
@@ -51,7 +51,7 @@ namespace Microservices.Service.OrderAPI.Controllers
                 {
                     objList = _db.OrderHeaders.Include(u => u.OrderDetails).Where(u => u.UserId == userId).OrderByDescending(u => u.OrderHeaderId).ToList();
                 }
-                _response.Result = _mapper.Map<IEnumerable<OrderHeader>>(objList);
+                _response.Result = _mapper.Map<IEnumerable<OrderHeaderDto>>(objList);
             }
             catch (Exception ex)
             {
@@ -61,7 +61,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             return _response;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet("GetOrder/{id:int}")]
         public ResponseDto? Get(int id)
         {
@@ -78,7 +78,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             return _response;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("CreateOrder")]
         public async Task<ResponseDto> CreateOrder([FromBody] CartDto cartDto)
         {
@@ -103,7 +103,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             return _response;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("CreateStripeSession")]
         public async Task<ResponseDto> CreateStripeSession([FromBody] StripeRequestDto stripeRequestDto)
         {
@@ -165,7 +165,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             return _response;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("ValidateStripeSession")]
         public async Task<ResponseDto> ValidateStripeSession([FromBody] int orderHeaderId)
         {
@@ -204,7 +204,7 @@ namespace Microservices.Service.OrderAPI.Controllers
             return _response;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost("UpdateOrderStatus/{orderId:int}")]
         public async Task<ResponseDto> UpdateOrderStatus(int orderId, [FromBody] string newStatus)
         {
