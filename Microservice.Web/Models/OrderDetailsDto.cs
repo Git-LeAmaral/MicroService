@@ -1,6 +1,6 @@
 ﻿using Microservice.Web.Models;
 
-namespace Microseervice.Web.Models
+namespace Microservice.Web.Models
 {
     public class OrderDetailsDto
     {

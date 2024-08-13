@@ -1,4 +1,4 @@
-﻿namespace Microseervice.Web.Models
+﻿namespace Microservice.Web.Models
 {
     public class OrderHeaderDto
     {
