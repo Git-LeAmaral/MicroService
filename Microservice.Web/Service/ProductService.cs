@@ -42,15 +42,6 @@ namespace Microservice.Web.Service
             });
         }
 
-        public async Task<ResponseDto?> GetProductAsync(string nome)
-        {
-            return await _baseService.SendAsync(new RequestDto()
-            {
-                ApiType = SD.ApiType.GET,
-                Url = SD.ProductAPIBase + "/api/product/" + nome
-            });
-        }
-
         public async Task<ResponseDto?> GetProductByIdAsync(int id)
         {
             return await _baseService.SendAsync(new RequestDto()
